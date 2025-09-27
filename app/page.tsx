@@ -8,3 +8,8 @@ const Homepage = () => {
 }
 
 export default Homepage
+
+// localhost:3000
+// localhost:3000/about
+// localhost:3000/about/team
+// localhost:3000/about/team/zero
