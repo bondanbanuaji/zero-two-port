@@ -9,7 +9,7 @@ const font = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Zero Two | ゼロツー",
+  title: "ZeRO OFFICIAL WeBSITe",
   description:
     "Zero Two is an iconic character from the anime Darling in the FranXX. With her pink hair, small horns, and charismatic personality, she is known as a mysterious yet captivating figure and one of the most beloved anime waifus worldwide.",
 };
