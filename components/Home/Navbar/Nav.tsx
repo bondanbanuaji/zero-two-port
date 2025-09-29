@@ -6,7 +6,11 @@ import { NavLinks } from "../../../constant/constant";
 import Link from "next/link";
 import { HiBars3BottomRight } from "react-icons/hi2";
 
-const Nav = () => {
+type Props = {
+    openNav:()=>void
+}
+
+const Nav = ({openNav}:Props) => {
 
     const [navBg, setNavBg] = useState(false)
 
@@ -50,12 +54,14 @@ const Nav = () => {
                 {/* Buttons */}
                 <div className="flex items-center space-x-4">
                     {/* CV Button */}
-                    <button className='transition-all duration-300 text-white flex items-center space-x-2 px-8 py-3.5 text-sm cursor-pointer rounded-lg bg-gradient-to-r from-[#FF4DA6] to-[#FF82B2] hover:opacity-60'>
+                    <button className='transition-all duration-300 text-white flex items-center space-x-2 px-8 py-3.5 text-sm cursor-pointer rounded-lg bg-gradient-to-r from-[#fd48a3] to-[#FF82B2] hover:opacity-60'>
                         <BiDownload className='w-5 h-5' />
                         <span>CV Zero</span>
                     </button>
                     {/* Hamburger Menu */}
-                    <HiBars3BottomRight className='w-8 h-8 cursor-pointer text-white lg:hidden' />
+                    <HiBars3BottomRight 
+                    onClick={openNav} 
+                    className='w-8 h-8 cursor-pointer text-white lg:hidden' />
                 </div>
             </div>
         </div>
