@@ -1,37 +1,37 @@
 export const NavLinks = [
     {
         id: 1,
-        url: '#',
+        url: '#home',
         label: 'Home',
     },
     {
         id: 2,
-        url: '#',
-        label: 'Services',
+        url: '#about',
+        label: 'About Zero Two',
     },
     {
         id: 3,
-        url: '#',
-        label: 'Resume',
+        url: '#story',
+        label: 'Story',
     },
     {
         id: 4,
-        url: '#',
-        label: 'Works',
+        url: '#gallery',
+        label: 'Gallery',
     },
     {
         id: 5,
-        url: '#',
-        label: 'Skills',
+        url: '#quotes',
+        label: 'Quotes',
     },
     {
         id: 6,
-        url: '#',
-        label: 'Testimonials',
+        url: '#skills',
+        label: 'Abilities',
     },
     {
         id: 7,
-        url: '#',
-        label: 'Contact',
+        url: '#contact',
+        label: 'Contact / Fan Message',
     },
 ]

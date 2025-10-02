@@ -4,9 +4,10 @@ import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CgClose } from 'react-icons/cg';
-import { FaItunes, FaXTwitter, FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa6';
-import { SiLine, SiBilibili } from 'react-icons/si';
 import { NavLinks } from '@/constant/constant';
+import { socialLinks } from '@/constant/socialLinks';
+import Image from 'next/image';
+import logoPict from '@/app/favicon.jpg';
 
 type MobileNavProps = {
   showNav: boolean;
@@ -18,17 +19,6 @@ const MobileNav: React.FC<MobileNavProps> = ({ showNav, closeNav }) => {
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
   if (!mounted) return null;
-
-  const socialLinks = [
-    { icon: FaItunes, url: "#", color: "text-[#FA243C]" },
-    { icon: FaXTwitter, url: "#", color: "text-black" },
-    { icon: FaFacebookF, url: "#", color: "text-[#1877F2]" },
-    { icon: FaInstagram, url: "#", color: "text-[#E4405F]" },
-    { icon: FaTiktok, url: "#", color: "text-black" },
-    { icon: SiLine, url: "#", color: "text-[#00B900]" },
-    { icon: FaYoutube, url: "#", color: "text-[#FF0000]" },
-    { icon: SiBilibili, url: "#", color: "text-[#FB7299]" },
-  ];
 
   return (
     <AnimatePresence>
@@ -47,24 +37,31 @@ const MobileNav: React.FC<MobileNavProps> = ({ showNav, closeNav }) => {
               className="flex items-center space-x-3"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
             >
-              <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center shadow-lg">
-                <span className="text-black font-bold text-lg">02</span>
+              <div className="w-10 h-10 bg-white rounded-2xl flex items-center justify-center shadow-lg">
+                <Image
+                  src={logoPict}
+                  alt="logo"
+                  priority
+                />
               </div>
-              <h1 className="text-white font-bold text-2xl tracking-wide">Zero Two</h1>
+              <h1 className="text-white font-bold text-2xl tracking-wide"></h1>
             </motion.div>
 
             {/* CLOSE BUTTON */}
             <motion.button
               onClick={closeNav}
-              className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all duration-300 hover:rotate-90"
-              initial={{ opacity: 0, rotate: -90 }}
-              animate={{ opacity: 1, rotate: 0 }}
-              exit={{ opacity: 0, rotate: 90 }}
+              className="p-3" 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
+              whileHover={{
+                scaleY: 0.7,
+                transition: { duration: 0.3, ease: "easeOut" } 
+              }}
             >
-              <CgClose className="w-6 h-6 text-white hover:text-[#FF4DA6] transition-colors" />
+              <CgClose className="w-12 h-12 text-white hover:text-[#FF4DA6] transition-colors" />
             </motion.button>
           </div>
 
@@ -127,7 +124,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ showNav, closeNav }) => {
                     hidden: { opacity: 0, y: 20 },
                     visible: { opacity: 1, y: 0 },
                   }}
-                  whileHover={{ scale: 1.15, rotate: 5 }}
+                  whileHover={{ scale: 1.15 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <social.icon className="w-5 h-5" />
