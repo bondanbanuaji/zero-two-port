@@ -17,9 +17,8 @@ const Hero = () => {
                     className='rounded-full border-4 border-pink-400'
                 />
 
-                <h1 className='text-2xl sm:text-4xl md:text-5xl lg:text-6xl mt-6 text-center font-bold tracking-wide text-neutral-100'>
+                <h1 className='text-4xl sm:text-6xl md:text-7xl lg:text-8xl mt-6 text-center font-bold tracking-wide text-neutral-100'>
                     <span className='text-pink-300'>Zero Two</span> <br />
-                    <span className='text-neutral-400 italic'>Code: 002</span>
                 </h1>
 
                 <h2 className='mt-5 text-sm px-2 text-center sm:text-2xl font-medium flex items-center text-neutral-200'>
