@@ -111,7 +111,7 @@ const Nav: React.FC<NavProps> = ({ openNav }) => {
               className="
                 text-white
                 transition-all duration-300
-                hover:scale-90 hover:text-[#FF4DA6]
+                hover:scale-90
                 w-10 h-12
                 sm:w-8 sm:h-10
                 md:w-12 md:h-12 

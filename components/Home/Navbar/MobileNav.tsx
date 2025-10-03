@@ -108,7 +108,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ showNav, closeNav }) => {
                 md:w-12 md:h-12 
                 lg:w-12 lg:h-14
                 xl:w-14 xl:h-14
-                text-white hover:text-[#FF4DA6] transition-colors" />
+                text-white transition-colors" />
               </motion.button>
             </div>
 
@@ -128,7 +128,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ showNav, closeNav }) => {
                     className="group relative text-3xl md:text-4xl font-semibold text-white hover:text-[#FF4DA6] transition-colors duration-300"
                   >
                     {link.label}
-                    <span className="absolute left-0 bottom-0 top-1/2 h-[2px] w-0 bg-gradient-to-r from-[#FF4DA6] to-[#fd48a3] group-hover:w-full transition-all duration-700 -translate-y-1/2"></span>
+                    <span className="absolute left-0 bottom-0 top-1/2 h-[2px] w-0 bg-gradient-to-r from-[#ffffff] to-[#f74dcc] group-hover:w-full transition-all duration-700 -translate-y-1/2"></span>
                   </Link>
                 </motion.div>
               ))}
@@ -136,7 +136,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ showNav, closeNav }) => {
 
             {/* SOCIAL LINKS */}
             <motion.div className="px-6 pb-6 flex flex-col items-center">
-              <p className="text-white/70 text-sm mb-4 text-center">Follow Me</p>
+              <p className="text-white/90 text-sm mb-4 text-center">Follow Me</p>
               <div className="grid grid-cols-4 gap-3">
                 {socialLinks.map((social, index) => (
                   <motion.a

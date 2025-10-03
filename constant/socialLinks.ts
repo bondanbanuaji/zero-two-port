@@ -1,5 +1,4 @@
 import {
-    FaItunes,
     FaXTwitter,
     FaFacebookF,
     FaInstagram,
@@ -9,7 +8,6 @@ import {
 import { SiLine, SiBilibili } from "react-icons/si";
 
 export const socialLinks = [
-    { icon: FaItunes, url: "#", color: "text-[#FA243C]" },
     { icon: FaXTwitter, url: "#", color: "text-black" },
     { icon: FaFacebookF, url: "#", color: "text-[#1877F2]" },
     { icon: FaInstagram, url: "#", color: "text-[#E4405F]" },
